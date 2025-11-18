@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-      <div className="hero grid md:grid-cols-2 items-center pt-40 xl:gap-0 gap-6 grid-cols-1">
+      <div className="hero grid md:grid-cols-2 items-center pt-40 xl:gap-0 gap-6 grid-cols-1 max-w-7xl mx-auto px-4 md:px-2">
       <div className="animate__animated animate__fadeInUp animate__delay-1s">
         <div className="flex items-center gap-3 mb-6 bg-zinc-800 w-fit p-4 rounded-2xl"> 
           <img src={Dataimage.HeroImage} alt="Hero Image" className="w-10 rounded-md" loading="lazy"/>
@@ -242,7 +242,7 @@ and creating clean, thoughtful visuals where technology, logic, and aesthetics c
 </div>
 
       {/* Proyek */}
-<div className="proyek mt-32 py-10" id="projects">
+<div className="proyek mt-32 py-10 max-w-7xl mx-auto px-4 md:px-2" id="projects">
 
   {/* Title */}
   <h1
