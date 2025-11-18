@@ -1,261 +1,606 @@
 import Dataimage from "./data";
 import { listTools, listProyek } from "./data";
+import { FaWhatsapp, FaEnvelope, FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { Typewriter } from "react-simple-typewriter";
 
 
 function App() {
 
   return (
     <>
-      <div className="hero grid md:grid-cols-2 items-center pt-10 xl:gap-0 gap-6 grid-cols-1">
+      <div className="hero grid md:grid-cols-2 items-center pt-40 xl:gap-0 gap-6 grid-cols-1">
       <div className="animate__animated animate__fadeInUp animate__delay-1s">
         <div className="flex items-center gap-3 mb-6 bg-zinc-800 w-fit p-4 rounded-2xl"> 
           <img src={Dataimage.HeroImage} alt="Hero Image" className="w-10 rounded-md" loading="lazy"/>
           <q> Don't Look Back </q>
         </div>
-        <h1 className="text-5xl/tight font-bold mb-6">Hi, Saya Muhammad Faisal</h1>
-        <p className="text-base/loose mb-6 opacity-50">Saya mahasiswa Teknik Informatika Universitas Negeri Semarang dengan ketertarikan di bidang Fullstack. 
-        Saya bersemangat untuk terus mengasah kemampuan dalam merancang dan membangun aplikasi web yang responsif dan fungsional.</p>
+        <h1
+  className="
+    text-5xl font-bold mb-6 leading-tight
+    bg-gradient-to-r from-[#ff76e9] via-[#7f6bff] to-[#007bff]
+    bg-clip-text text-transparent
+  "
+>
+  <Typewriter
+    words={[
+      "Hi, I'm Muhammad Faisal",
+      "Informatics Engineering Student",
+    ]}
+    loop={true}
+    cursor
+    cursorStyle="|"
+    typeSpeed={70}
+    deleteSpeed={50}
+    delaySpeed={1200}
+  />
+</h1>
+
+
+<h2 class="role-rotate text-2xl font-semibold mb-4"></h2>
+
+
+<p className="text-base/loose mb-6 text-white opacity-70">
+ A man passionate about crafting responsive web experiences, exploring intelligent systems,
+and creating clean, thoughtful visuals where technology, logic, and aesthetics come together to form meaningful digital moments.
+</p>
+
         <div className="flex items-center sm:gap-4 gap-2">
-          <a href="#" className="bg-[#15887c] text-white px-6 py-3 rounded-lg hover:bg-[#13675a] transition flex items-center gap-2">Download CV <i className="ri-download-line ri-lg"></i> </a>
-          <a href="#proyek" className="border border-white px-6 py-3 rounded-lg hover:bg-white hover:text-black transition flex items-center gap-2">Lihat Proyek <i className="ri-arrow-down-line ri-lg"></i></a>
+<a
+  href="#"
+  class="inline-flex items-center justify-center px-6 py-3 font-medium text-white rounded-full
+         bg-gradient-to-r from-[#ff76e9] to-[#007bff]
+         transition-all duration-300 ease-out
+         hover:shadow-[0_0_15px_2px_rgba(0,123,255,0.8)]
+         hover:scale-110"> Download CV <i class="ri-download-line ri-lg ml-2"></i>
+</a>
+
+          <a href="#about" 
+  className="inline-flex items-center justify-center border border-white px-6 py-3 rounded-full text-white transition-all duration-300 ease-in-out hover:bg-white hover:text-black hover:shadow-lg hover:scale-[1.05]">
+  Explore Now! 
+  <i className="ri-arrow-down-line ri-lg ml-2"></i>
+</a>
         </div>
       </div>
-      <img src={Dataimage.HeroImage} alt="Hero Image" className="w-[500px] md:ml-auto animate__animated animate__fadeInUp animate__delay-2s" loading="lazy"/>
+<img 
+  src={Dataimage.HeroImage} 
+  alt="Hero Image" 
+  className="
+    w-[400px] md:ml-auto 
+    animate__animated animate__fadeInUp animate__delay-2s
+    rounded-3xl 
+    shadow-2xl shadow-[#ff76e980] 
+    transition-all duration-700
+    hover:scale-105 hover:shadow-[#007bff80] 
+    hover:rotate-1
+    hover:brightness-110
+  " 
+  loading="lazy"
+/>
       </div>
 
       {/* Tentang */}
-      <div className="tentang mt-32 py-10" id="tentang">
-        <div className="w-2/3 lg:w3/4 w-full mx-auto p-7 bg-zinc-800 rounded-lg" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
-        <img src={Dataimage.HeroImage} alt="Hero Image" className="w-24 rounded-md mb-10 sm:hidden" loading="lazy"/>
-          <p className="text-base/loose mb-10">
-            Saya Muhammad Faisal, mahasiswa Teknik Informatika dengan fokus pada web development, machine learning, dan UI/UX design.
-
-Saya senang membangun solusi kreatif berbasis teknologi yang berdampak nyata, sekaligus terus belajar hal baru setiap harinya.
-
-Dalam pengembangan proyek, saya sering menggunakan Laravel dan React sebagai framework utama, serta Python untuk pengolahan data dan eksperimen machine learning. Saya juga menggunakan Figma untuk merancang tampilan antarmuka yang menarik dan intuitif.
-          </p>
-          <div className="flex item-center justify-between">
-            <img src={Dataimage.HeroImage} alt="Hero Image" className="w-24 rounded sm:block hidden" loading="lazy"/>
-            <div className="flex items-center gap-10">
-              <div>
-                <h1 className="text-4xl mb-1 ">
-                  45<span className="text-[#15887c]">+</span>
-                  </h1>
-                  <p>Proyek Selesai</p>
-              </div>
-              <div>
-                <h1 className="text-4xl mb-1 ">
-                  4<span className="text-[#15887c]">+</span>
-                  </h1>
-                  <p>Tahun Pengalaman</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Tools */}
-
-        <div className="tools mt-32">
-          <h1 className="text-4xl/snug font-bold mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" >Tools yang saya gunakan</h1>
-          <p className="xl:w-2/5 lg:w-2/4 md:w-2/3 sm:w-3/4 w-full text-base/loose opacity-50" data-aos="fade-up" data-aos-delay="300" data-aos-once="true">Berikut ini beberapa tools yang biasa saya pakai untuk pembuatan website ataupun desain</p>
-          <div className="tools-box mt-14 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
-
-          {listTools.map(tool => (
-            <div className=" flex items-center gap-2 p-3 border border-zinc-600 rounded-md hover:bg-zinc-800 group" key={tool.id} data-aos="fade-up" data-aos-duration="1000"data-aos-delay={tool.dad} data-aos-once="true">
-              <img src={tool.gambar} alt="Tools Image" className="w-14 bg-zinc-800 p-1 group-hover:bg-zinc-900" loading="lazy"/>
-              <div>
-                <h4 className="font-bold">{tool.nama}</h4>
-                <p className="opacity-50">{tool.ket}</p>
-              </div>
-            </div>
-          ))}
-
-          </div>
-        </div>
-      </div>
-
-      { /* Proyek */ }
-
-      <div className="proyek mt-32 py-10" id="proyek">
-        <h1 className="text-center text-4xl font-bold mb-2" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" >Proyek Saya</h1>
-        <p className="text-base/loose text-center opacity-50" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-once="true" >Berikut beberapa proyek yang telah saya kerjakan</p>
-        <div className="proyek-box mt-14 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
-          {listProyek.map(proyek => (
-            <div key={proyek.id} className="p-4 bg-zinc-800 arounded-md" data-aos="fade-up" data-aos-duration="1000" data-aos-delay={proyek.dad} data-aos-once="true" >
-              <img src={proyek.gambar} alt="Proyek Image" loading="lazy"/>
-              <div>
-                <h1 className="text-2xl font-bold my-4">
-                  {proyek.nama}
-                </h1>
-                <p className="text-base/loose mb-4">{proyek.desk}</p>
-                <div className="flex flex-wrap gap-2">
-                  {proyek.tools.map((tool, index) => (
-                  <p className="py-1 px-3 border border-zinc-500 bg-zinc-600 rounded-md font-semibold" key={index}>{tool}</p>
-                  ))}
-                </div>
-                <div className="mt-8 text-center">
-                  <a href="#" className="bg-[#15877c] p-3 rounded-lg block hover:bg-[#13675a]">Lihat Website</a>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-    { /* My Experience */ }
-
-<div className="experience mt-32 py-10 pt-24 md:pt-10" id="experience">
-  <h1 className="text-center text-4xl font-bold mb-2" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" >Pengalaman Saya</h1>
-  <p className="text-base/loose text-center opacity-50 mb-16" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" data-aos-once="true">
-    Perjalanan saya dalam berorganisasi dan berkolaborasi di berbagai kegiatan kampus.
-  </p>
-
-  <div className="relative w-full max-w-4xl mx-auto px-4 sm:px-6 md:px-8">
-    <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-[2px] bg-zinc-700 h-full rounded-full"></div>
-    <div className="block md:hidden absolute left-4 sm:left-6 w-[2px] bg-zinc-700 h-full rounded-full"></div>
-
-    {/* ITEM 1 */}
-    <div className="mb-20 flex flex-col md:flex-row items-center md:items-start relative" >
-      <div className="bg-[#15887c] w-5 h-5 rounded-full absolute left-4 sm:left-6 top-0 transform -translate-x-1/2 md:hidden"></div>
-      <div className="hidden md:block bg-[#15887c] w-5 h-5 rounded-full absolute left-1/2 top-0 transform -translate-x-1/2"></div>
-      <div className="md:w-1/2 md:pr-10 md:text-right text-left w-full pl-10 sm:pl-12 md:pl-0">
-        <h2 className="text-2xl font-bold text-[#15887c] mt-[-5px] md:mt-0" data-aos="fade-right" data-aos-duration="3000" data-aos-once="true" >HIMA ILKOM UNNES</h2>
-        <p className="opacity-70 mb-3" data-aos="fade-right" data-aos-duration="3000" data-aos-once="true" >Wakil Kepala Divisi Internal | Januari 2025 - Sekarang</p>
-        <p className="opacity-80 leading-relaxed" data-aos="fade-right" data-aos-duration="3000" data-aos-once="true" >
-          Mendampingi Kepala Divisi Internal dalam menjalankan program PSDM dan kegiatan minat–bakat, serta mendukung pengembangan potensi dan keterlibatan mahasiswa.
-        </p>
-      </div>
-
-      <div className="md:w-1/2 flex justify-start md:justify-start mt-6 md:mt-0 w-full pl-10 sm:pl-12 md:pl-10" data-aos="fade-left" data-aos-duration="3000" data-aos-once="true" >
-        <img
-          src="/assets/experience/wakoor_internal.jpeg"
-          alt="Wakoor Internal"
-          className="w-70 h-60 object-cover rounded-lg border border-zinc-700 shadow-lg"
-        />
-      </div>
-    </div>
-
-    {/* ITEM 2 */}
-    <div className="mb-20 flex flex-col md:flex-row-reverse items-center md:items-start relative">
-      <div className="bg-[#15887c] w-5 h-5 rounded-full absolute left-4 sm:left-6 top-0 transform -translate-x-1/2 md:hidden"></div>
-      <div className="hidden md:block bg-[#15887c] w-5 h-5 rounded-full absolute left-1/2 top-0 transform -translate-x-1/2"></div>
-
-      <div className="md:w-1/2 md:pl-10 md:text-left text-left w-full pl-10 sm:pl-12 md:pl-0">
-        <h2 className="text-2xl font-bold text-[#15887c] mt-[-5px] md:mt-0" data-aos="fade-left" data-aos-duration="3000" data-aos-once="true" >Computer Science Sport And Art Competition (CSS)</h2>
-        <p className="opacity-70 mb-3" data-aos="fade-left" data-aos-duration="3000" data-aos-once="true" >Steering Commite | November 2025</p>
-        <p className="opacity-80 leading-relaxed" data-aos="fade-left" data-aos-duration="3000" data-aos-once="true" >
-          Mengawasi jalannya rangkaian lomba, memberikan arahan strategis, serta memastikan kegiatan berjalan sesuai konsep dan standar yang ditetapkan.
-        </p>
-      </div>
-
-     <div
-  className="md:w-1/2 flex justify-start md:justify-end mt-6 md:mt-0 w-full pl-10 sm:pl-12 md:pr-10"
-  data-aos="fade-right"
-  data-aos-duration="3000"
+<div
+  id="about"
+  className="mt-32 py-20"
+  data-aos="fade-up"
+  data-aos-duration="1200"
   data-aos-once="true"
 >
-  <img
-    src="/assets/experience/css.jpeg"
-    alt="CSS"
-    className="w-70 h-60 object-cover rounded-lg border border-zinc-700 shadow-lg"
-  />
-</div>
+  <h1 className="text-4xl font-bold text-center mb-4">
+    About{" "}
+    <span className="bg-gradient-to-r from-[#ff76e9] to-[#007bff] bg-clip-text text-transparent">
+      Me
+    </span>
+  </h1>
 
-    </div>
+  <p className="text-center opacity-60 max-w-2xl mx-auto mb-16 text-base leading-relaxed">
+    A brief introduction to who I am, what I do, and what keeps me going.
+  </p>
 
-    {/* ITEM 3 */}
-    <div className="mb-20 flex flex-col md:flex-row items-center md:items-start relative">
-      <div className="bg-[#15887c] w-5 h-5 rounded-full absolute left-4 sm:left-6 top-0 transform -translate-x-1/2 md:hidden"></div>
-      <div className="hidden md:block bg-[#15887c] w-5 h-5 rounded-full absolute left-1/2 top-0 transform -translate-x-1/2"></div>
+  <div className="flex flex-col lg:flex-row items-center gap-16 max-w-6xl mx-auto px-6">
 
-      <div className="md:w-1/2 md:pr-10 md:text-right text-left w-full pl-10 sm:pl-12 md:pl-0">
-        <h2 className="text-2xl font-bold text-[#15887c] mt-[-5px] md:mt-0" data-aos="fade-right" data-aos-duration="3000" data-aos-once="true" >OSJUR INTERFACE ILKOM 2025</h2>
-        <p className="opacity-70 mb-3" data-aos="fade-right" data-aos-duration="3000" data-aos-once="true" >Wakoor Pendamping | Agu 2025 - Sep 2025</p>
-        <p className="opacity-80 leading-relaxed" data-aos="fade-right" data-aos-duration="3000" data-aos-once="true" >
-          Menjadi Pendamping OSJUR INTERFACE 2025 memberi saya kesempatan untuk belajar memimpin dan bekerja sama dalam menciptakan pengalaman OSJUR yang berkesan bagi mahasiswa baru Teknik Informatika.
-        </p>
-      </div>
-
-      <div className="md:w-1/2 flex justify-start md:justify-start mt-6 md:mt-0 w-full pl-10 sm:pl-12 md:pl-10" data-aos="fade-left" data-aos-duration="3000" data-aos-once="true">
+    {/* Foto */}
+    <div className="w-full lg:w-1/2 flex justify-center">
+      <div className="
+        relative rounded-3xl overflow-hidden
+        border border-white/10 shadow-xl 
+        shadow-[#ff76e950] hover:shadow-[#007bff50] 
+        transition-all duration-500
+      ">
         <img
-          src="/assets/experience/Interface2025.jpeg"
-          alt="Interface2025"
-          className="w-70 h-60 object-cover rounded-lg border border-zinc-700"
+          src={Dataimage.AboutImage}
+          alt="Foto Faisal"
+          loading="lazy"
+          className="
+            w-72 h-72 sm:w-80 sm:h-80 lg:w-[350px] lg:h-[350px]
+            object-cover rounded-3xl
+            hover:scale-105 transition-all duration-500
+          "
         />
-      </div>
-    </div>
 
-    {/* ITEM 4 */}
-    <div className="mb-20 flex flex-col md:flex-row-reverse items-center md:items-start relative">
-      <div className="bg-[#15887c] w-5 h-5 rounded-full absolute left-4 sm:left-6 top-0 transform -translate-x-1/2 md:hidden"></div>
-      <div className="hidden md:block bg-[#15887c] w-5 h-5 rounded-full absolute left-1/2 top-0 transform -translate-x-1/2"></div>
-
-      <div className="md:w-1/2 md:pl-10 md:text-left text-left w-full pl-10 sm:pl-12 md:pl-0">
-        <h2 className="text-2xl font-bold text-[#15887c] mt-[-5px] md:mt-0" data-aos="fade-left" data-aos-duration="3000" data-aos-once="true" >Workshop BitCamp</h2>
-        <p className="opacity-70 mb-3" data-aos="fade-left" data-aos-duration="3000" data-aos-once="true" > Sie Acara | Mei 2025 </p>
-        <p className="opacity-80 leading-relaxed" data-aos="fade-left" data-aos-duration="3000" data-aos-once="true" >
-        Menyusun alur kegiatan, mengoordinasikan kebutuhan teknis, dan memastikan workshop bertema Machine Learning berjalan terstruktur dan interaktif.</p>
-      </div>
-
-      <div className="md:w-1/2 flex justify-start md:justify-end mt-6 md:mt-0 w-full pl-10 sm:pl-12 md:pr-10" data-aos="fade-right" data-aos-duration="3000" data-aos-once="true" >
-        <img
-          src="/assets/experience/bitcamp.jpeg"
-          alt="Bitcamp"
-          className="w-70 h-60 object-cover rounded-lg border border-zinc-700"
-        />
+        {/* Glow background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#ff76e930] to-[#007bff30] opacity-40 mix-blend-soft-light"></div>
       </div>
     </div>
 
-    {/* ITEM 5 */}
-    <div className="mb-20 flex flex-col md:flex-row items-center md:items-start relative">
-      <div className="bg-[#15887c] w-5 h-5 rounded-full absolute left-4 sm:left-6 top-0 transform -translate-x-1/2 md:hidden"></div>
-      <div className="hidden md:block bg-[#15887c] w-5 h-5 rounded-full absolute left-1/2 top-0 transform -translate-x-1/2"></div>
+    {/* Tulisan */}
+    <div className="w-full lg:w-1/2 space-y-6 text-center lg:text-left">
 
-      <div className="md:w-1/2 md:pr-10 md:text-right text-left w-full pl-10 sm:pl-12 md:pl-0">
-        <h2 className="text-2xl font-bold text-[#15887c] mt-[-5px] md:mt-0" data-aos="fade-right" data-aos-duration="3000" data-aos-once="true" >Volunteer Osjur Interface 2024</h2>
-        <p className="opacity-70 mb-3" data-aos="fade-right" data-aos-duration="3000" data-aos-once="true" > Humas | Agu 2025 - Sep 2025 </p>
-        <p className="opacity-80 leading-relaxed" data-aos="fade-right" data-aos-duration="3000" data-aos-once="true" >
-          Volunteer Humas OSJUR INTERFACE 2024 yang menangani komunikasi dan publikasi, serta meraih penghargaan Most Valuable Volunteer (MVP).
-        </p>
+      <h2 className="text-3xl font-semibold bg-gradient-to-r from-[#ff76e9] to-[#007bff] bg-clip-text text-transparent">
+        Muhammad Faisal
+      </h2>
+
+      <p className="text-base leading-relaxed text-white/80 hover:text-white transition-all duration-300">
+        I'm an Informatics Engineering student focusing on web development, machine learning, and UI/UX design.
+        I enjoy helping create digital solutions that are functional, beautiful, and have immediate impact.
+      </p>
+
+      <p className="text-base leading-relaxed text-white/80 hover:text-white transition-all duration-300">
+       In web development, I am used to using it <span className="font-semibold text-white">Laravel</span> and 
+        <span className="font-semibold text-white"> React</span> as the main tech stack. For data experiments, I use 
+        <span className="font-semibold text-white"> Python</span>. I also rely on 
+        <span className="font-semibold text-white"> Figma</span> to design modern UIs that are intuitive, consistent, and easy to use.
+      </p>
+
+      {/* Highlight Box */}
+      <div className="bg-zinc-900/40 border border-white/10 p-5 rounded-2xl mt-6 backdrop-blur-md">
+        <h3 className="font-semibold text-lg mb-2 text-white">Areas of Expertise</h3>
+        <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
+          {["Web Development", "Frontend", "Backend", "Machine Learning", "UI/UX Design"].map((item, index) => (
+            <span
+              key={index}
+              className="px-4 py-2 bg-zinc-800 rounded-full border border-white/10 text-sm opacity-80 hover:opacity-100 hover:bg-zinc-700 transition-all"
+            >
+              {item}
+            </span>
+          ))}
+        </div>
       </div>
 
-      <div className="md:w-1/2 flex justify-start md:justify-start mt-6 md:mt-0 w-full pl-10 sm:pl-12 md:pl-10" data-aos="fade-left" data-aos-duration="3000" data-aos-once="true" >
-        <img
-          src="/assets/experience/interface2024.jpeg"
-          alt="Interface2024"
-          className="w-70 h-60 object-cover rounded-lg border border-zinc-700"
-        />
-      </div>
     </div>
   </div>
 </div>
+<div>
 
-   { /* Kontak */ }
-   <div className="kontak mt-32 sm:py-10 p-0" id="kontak">
-      <h1 className="text-center text-4xl font-bold mb-2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-once="true" >Kontak Saya</h1>
-      <p className="text-base/loose text-center opacity-50 mb-10" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" >
-      Mari Terhubung dengan saya.
-      </p>
-      <form action="https://formsubmit.co/paisalmen123@gmail.com" method="POST" className="bg-zinc-800 p-10 sm:w-fit w-full mx-auto rounded-md" autoComplete="off" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" data-aos-once="true" >
-        <div className="flex flex-col gap-6">
-          <div className="flex flex-col gap-2">
-            <label className="font-semibold">Nama Lengkap</label>
-            <input type="text" name="nama" placeholder="Masukkan Nama..." className="border border-zinc-500 p-2 rounded-md" required />
-          </div>
-            <div className="flex flex-col gap-2">
-            <label className="font-semibold">Email</label>
-            <input type="email" name="email" placeholder="Masukkan Email..." className="border border-zinc-500 p-2 rounded-md" required />
-          </div>
-            <div className="flex flex-col gap-2">
-            <label htmlFor="pesan" className="font-semibold">Pesan</label>
-            <textarea name="pesan" id="pesan" cols="45" rows="7" placeholder="Pesan..." className="border border-zinc-500 p-2 rounded-md" required></textarea>
-          </div>
-            <div>
-            <button type="submit" className="bg-violet-700 p-3 rounded-lg w-full cursor-pointer block border border-zinc-600 hover:bg-violet-600">Kirim Pesan</button>
-          </div>
+        {/* Tools */}
+
+<div className="tools mt-32">
+  <h1
+    className=" text-4xl/snug font-extrabold mb-4 bg-gradient-to-r from-[#ff76e9] to-[#007bff] text-transparent text-center bg-clip-text"
+    data-aos="fade-up"
+    data-aos-duration="1000"
+    data-aos-once="true"
+  >
+    Tools I use to bring ideas to life
+  </h1>
+
+  <p
+    className="text-base opacity-60 max-w-2xl mx-auto text-center leading-relaxed"
+    data-aos="fade-up"
+    data-aos-delay="300"
+    data-aos-once="true"
+  >
+    Some of the tools I commonly use in website development, design, and other digital project development.
+  </p>
+
+  <div
+    className="
+      tools-box mt-14 
+      grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-2
+      gap-4 max-w-7xl mx-auto px-2
+    "
+  >
+    {listTools.map((tool) => (
+      <div
+        key={tool.id}
+        className="
+          group flex items-center gap-4 
+          p-5 rounded-2xl 
+          border border-white/10 
+          bg-zinc-900/40 backdrop-blur-md
+          hover:bg-zinc-900 
+          hover:border-[#007bff]/40 
+          transition-all duration-500
+          shadow-lg hover:shadow-[#007bff40]
+        "
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-delay={tool.dad}
+        data-aos-once="true"
+      >
+        {/* Icon */}
+        <div
+          className="
+            w-16 h-16 rounded-xl 
+            bg-zinc-800 
+            flex items-center justify-center 
+            border border-white/10
+            group-hover:scale-110 
+            group-hover:bg-zinc-700 
+            transition-all duration-500
+          "
+        >
+          <img
+            src={tool.gambar}
+            alt={tool.nama}
+            loading="lazy"
+            className="w-10 h-10 object-contain"
+          />
         </div>
-      </form>
-   </div>
+
+        {/* Text */}
+        <div>
+          <h4 className="font-semibold text-lg group-hover:text-white transition">
+            {tool.nama}
+          </h4>
+          <p className="opacity-60 text-sm">{tool.ket}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+</div>
+
+      {/* Proyek */}
+<div className="proyek mt-32 py-10" id="projects">
+
+  {/* Title */}
+  <h1
+    className="text-4xl/snug font-extrabold mb-3 bg-gradient-to-r from-[#ff76e9] to-[#007bff] text-transparent bg-clip-text"
+    data-aos="fade-up"
+    data-aos-duration="1000"
+    data-aos-once="true"
+  >
+    My Projects
+  </h1>
+
+  {/* Subtitle */}
+  <p
+    className="text-base opacity-60 max-w-xl leading-relaxed"
+    data-aos="fade-up"
+    data-aos-duration="1000"
+    data-aos-delay="300"
+    data-aos-once="true"
+  >
+   Here are some projects I have worked on in web development, UI design, and other technologies.
+  </p>
+
+  {/* Grid */}
+  <div className="proyek-box mt-14 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6">
+
+    {listProyek.map((proyek) => (
+      <div
+        key={proyek.id}
+        className="p-4 bg-zinc-800 border border-zinc-700 rounded-xl hover:border-[#ff76e9] transition-all duration-300 hover:shadow-xl hover:shadow-[#ff76e93a]"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-delay={proyek.dad}
+        data-aos-once="true"
+      >
+        
+        {/* Image */}
+        <img
+          src={proyek.gambar}
+          alt="Proyek Image"
+          loading="lazy"
+          className="rounded-lg mb-4"
+        />
+
+        {/* Title */}
+        <h1
+  className="text-2xl font-bold mb-2 bg-gradient-to-r from-[#ff76e9] to-[#007bff] text-transparent bg-clip-text"
+>
+  {proyek.nama}
+</h1>
+
+
+        {/* Description */}
+        <p className="text-sm opacity-70 leading-relaxed mb-4">
+          {proyek.desk}
+        </p>
+
+        {/* Tools */}
+        <div className="flex flex-wrap gap-2">
+          {proyek.tools.map((tool, index) => (
+            <p
+              className="py-1 px-3 border border-zinc-500 bg-zinc-700/40 rounded-md text-xs font-semibold"
+              key={index}
+            >
+              {tool}
+            </p>
+          ))}
+        </div>
+
+        {/* Button */}
+        <div className="mt-8">
+          <a
+            href={proyek.link}
+            target="_blank"
+            className="bg-gradient-to-r from-[#ff76e9] to-[#007bff] py-2 px-4 rounded-lg block text-center font-semibold hover:opacity-90 transition"
+          >
+            Lihat Sekarang!
+          </a>
+        </div>
+      </div>
+    ))}
+
+  </div>
+</div>
+    
+
+    {/* My Experience */}
+
+<div className="experience mt-32 py-10 pt-24 md:pt-10" id="experience">
+
+  <h1 className="text-4xl font-bold text-center mb-4"
+  data-aos="fade-up"
+    data-aos-duration="1000"
+    data-aos-once="true">
+    My{" "}
+    <span className="bg-gradient-to-r from-[#ff76e9] to-[#007bff] bg-clip-text text-transparent">
+      Experience
+    </span>
+  </h1>
+
+  <p
+    className="text-base/loose text-center opacity-50 mb-16"
+    data-aos="fade-up"
+    data-aos-duration="1000"
+    data-aos-delay="200"
+    data-aos-once="true"
+  >
+    My journey in organizing and collaborating in various campus activities.
+  </p>
+
+  <div className="relative w-full max-w-4xl mx-auto px-4 sm:px-6 md:px-8">
+
+    {/* GARIS TIMELINE */}
+    <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-[3px] bg-gradient-to-b from-[#ff76e9] to-[#007bff] h-full rounded-full"></div>
+    <div className="block md:hidden absolute left-4 sm:left-6 w-[3px] bg-gradient-to-b from-[#ff76e9] to-[#007bff] h-full rounded-full"></div>
+
+    {/* ITEM TEMPLATE */}
+    {[
+      {
+        title: "HIMA ILKOM UNNES",
+        role: "Vice Head of Internal Division | January 2025 - Present",
+        desc: "Assisting the Head of Internal Division in implementing PSDM programs and talent activities, as well as supporting the development of student potential.",
+        img: "/assets/experience/wakoor_internal.jpeg",
+        flip: false,
+      },
+      {
+        title: "Computer Science Sport And Art Competition (CSS)",
+        role: "Steering Committee | November 2025",
+        desc: "Overseeing the competition implementation, providing strategic direction, and ensuring activities run according to standards.",
+        img: "/assets/experience/css.jpeg",
+        flip: true,
+      },
+      {
+        title: "OSJUR INTERFACE ILKOM 2025",
+        role: "Deputy Coordinator | Aug 2025 - Sep 2025",
+        desc: "Learning to lead and collaborate in creating a memorable OSJUR experience for new students.",
+        img: "/assets/experience/Interface2025.jpeg",
+        flip: false,
+      },
+      {
+        title: "Workshop BitCamp",
+        role: "Event Committee | May 2025",
+        desc: "Organizing the event flow, coordinating technical needs, and ensuring the Machine Learning workshop runs smoothly.",
+        img: "/assets/experience/bitcamp.jpeg",
+        flip: true,
+      },
+      {
+        title: "Volunteer OSJUR INTERFACE 2024",
+        role: "Public Relations | Aug 2024 - Sep 2024",
+        desc: "Handling event publicity and communication, and receiving the Most Valuable Volunteer (MVP) award.",
+        img: "/assets/experience/interface2024.jpeg",
+        flip: false,
+      },
+    ].map((item, index) => (
+      <div
+        key={index}
+        className={`mb-20 flex flex-col ${
+          item.flip ? "md:flex-row-reverse" : "md:flex-row"
+        } items-center md:items-start relative`}
+      >
+        {/* Titik timeline */}
+        <div className="bg-gradient-to-r from-[#ff76e9] to-[#007bff] w-5 h-5 rounded-full absolute left-4 sm:left-6 top-0 transform -translate-x-1/2 md:hidden"></div>
+        <div className="hidden md:block bg-gradient-to-r from-[#ff76e9] to-[#007bff] w-5 h-5 rounded-full absolute left-1/2 top-0 transform -translate-x-1/2"></div>
+
+        {/* TEXT */}
+        <div
+          className={`md:w-1/2 w-full ${
+            item.flip
+              ? "md:pl-10 md:text-left"
+              : "md:pr-10 md:text-right"
+          } text-left pl-10 sm:pl-12 md:pl-0`}
+        >
+          <h2
+            className="text-2xl font-bold bg-gradient-to-r from-[#ff76e9] to-[#007bff] text-transparent bg-clip-text"
+            data-aos={item.flip ? "fade-left" : "fade-right"}
+            data-aos-duration="2000"
+            data-aos-once="true"
+          >
+            {item.title}
+          </h2>
+
+          <p
+            className="opacity-70 mb-3"
+            data-aos={item.flip ? "fade-left" : "fade-right"}
+            data-aos-duration="2000"
+            data-aos-once="true"
+          >
+            {item.role}
+          </p>
+
+          <p
+            className="opacity-80 leading-relaxed"
+            data-aos={item.flip ? "fade-left" : "fade-right"}
+            data-aos-duration="2000"
+            data-aos-once="true"
+          >
+            {item.desc}
+          </p>
+        </div>
+
+        {/* IMAGE */}
+        <div
+          className={`md:w-1/2 w-full mt-6 md:mt-0 flex ${
+            item.flip ? "md:justify-end" : "md:justify-start"
+          } pl-10 sm:pl-12 ${item.flip ? "md:pr-10" : "md:pl-10"}`}
+          data-aos={item.flip ? "fade-right" : "fade-left"}
+          data-aos-duration="2000"
+          data-aos-once="true"
+        >
+          <img
+            src={item.img}
+            alt={item.title}
+            loading="lazy"
+            className="w-70 h-60 object-cover rounded-lg border-2 
+            border-[#007bff] shadow-lg shadow-[#007bff] 
+            transition duration-300 transform hover:scale-105 hover:shadow-xl cursor-pointer"
+          />
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+{/* Kontak */}
+<div className="kontak mt-32 p-5" id="contact">
+
+  {/* Title */}
+  <div className="text-center mb-14">
+    <h1
+      className="text-4xl font-extrabold bg-gradient-to-r from-[#ff76e9] to-[#007bff] text-transparent bg-clip-text"
+      data-aos="fade-up"
+    >
+      My Contact
+    </h1>
+    <p
+      className="text-base opacity-70 mt-2"
+      data-aos="fade-up"
+      data-aos-delay="200"
+    >
+      Please feel free to contact me through the contact information or the form below.
+    </p>
+  </div>
+
+  {/* Main Container */}
+  <div className="max-w-6xl mx-auto grid lg:grid-cols-2 grid-cols-1 gap-10">
+
+    {/* LEFT — Glassmorphism Contact Card */}
+    <div
+      className="backdrop-blur-lg bg-white/5 border border-white/10 p-8 rounded-2xl shadow-xl relative overflow-hidden"
+      data-aos="fade-right"
+    >
+      {/* Glow Background */}
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-[#ff76e913] to-[#007bff13] opacity-20 pointer-events-none"></div>
+
+      <h2 className="text-2xl font-semibold mb-6 text-[#ff76e9] drop-shadow">
+        Contact Information
+      </h2>
+
+      <div className="flex flex-col gap-5 relative z-10">
+
+        <a href="https://wa.me/6289623080473" target="_blank"
+          className="flex items-center gap-4 p-3 rounded-lg hover:bg-white/10 transition">
+          <FaWhatsapp className="text-green-400 text-3xl" />
+          <span className="text-lg">0896-2308-0473</span>
+        </a>
+
+        <a href="mailto:muhammadfaisal.0514@gmail.com"
+          className="flex items-center gap-4 p-3 rounded-lg hover:bg-white/10 transition">
+          <FaEnvelope className="text-blue-400 text-3xl" />
+          <span className="text-lg">muhammadfaisal.0514@gmail.com</span>
+        </a>
+
+        <hr className="border-zinc-700 my-2" />
+
+        <h3 className="font-semibold text-[#007bff] mb-2">Social Media</h3>
+
+        <a href="https://github.com/paisalmen14" target="_blank"
+          className="flex items-center gap-4 p-3 rounded-lg hover:bg-white/10 transition">
+          <FaGithub className="text-2xl" />
+          <span className="text-lg">GitHub</span>
+        </a>
+
+        <a href="https://www.linkedin.com/in/muhammad-faisal-838220195/" target="_blank"
+          className="flex items-center gap-4 p-3 rounded-lg hover:bg-white/10 transition">
+          <FaLinkedin className="text-blue-500 text-2xl" />
+          <span className="text-lg">LinkedIn</span>
+        </a>
+
+        <a href="https://www.instagram.com/muhfaisal1_/" target="_blank"
+          className="flex items-center gap-4 p-3 rounded-lg hover:bg-white/10 transition">
+          <FaInstagram className="text-pink-500 text-2xl" />
+          <span className="text-lg">Instagram</span>
+        </a>
+
+      </div>
+    </div>
+
+    {/* RIGHT — Form */}
+    <form
+      action="https://formsubmit.co/paisalmen123@gmail.com"
+      method="POST"
+      className="bg-zinc-900 p-8 rounded-2xl border border-zinc-700 shadow-lg"
+      autoComplete="off"
+      data-aos="fade-left"
+    >
+      <h2 className="text-2xl font-semibold mb-6 bg-gradient-to-r from-[#ff76e9] to-[#007bff] bg-clip-text text-transparent">
+        Send Me a Message
+      </h2>
+
+      <div className="flex flex-col gap-5">
+
+        <div>
+          <label className="font-medium mb-1 block">Full Name</label>
+          <input
+            type="text"
+            name="nama"
+            placeholder="Enter Your Name..."
+            className="w-full p-3 rounded-lg bg-zinc-800 border border-zinc-600 focus:border-[#007bff] focus:ring-2 focus:ring-[#007bff66] outline-none transition"
+            required
+          />
+        </div>
+
+        <div>
+          <label className="font-medium mb-1 block">Email</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter Your Email..."
+            className="w-full p-3 rounded-lg bg-zinc-800 border border-zinc-600 focus:border-[#ff76e9] focus:ring-2 focus:ring-[#ff76e966] outline-none transition"
+            required
+          />
+        </div>
+
+        <div>
+          <label className="font-medium mb-1 block">Message</label>
+          <textarea
+            name="message"
+            rows="6"
+            placeholder="Write your message..."
+            className="w-full p-3 rounded-lg bg-zinc-800 border border-zinc-600 focus:border-[#007bff] focus:ring-2 focus:ring-[#007bff66] outline-none transition"
+            required
+          ></textarea>
+        </div>
+
+        <button
+          type="submit"
+          className="w-full py-3 rounded-lg font-semibold text-white bg-gradient-to-r from-[#ff76e9] to-[#007bff] hover:opacity-90 transition"
+        >
+          Send Message
+        </button>
+
+      </div>
+
+      {/* Hidden Inputs */}
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_template" value="table" />
+    </form>
+  </div>
+</div>
+
 
     </> 
   )

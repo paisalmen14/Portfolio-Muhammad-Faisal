@@ -1,54 +1,117 @@
 import { useState, useEffect } from "react";
+import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 
-const Navbar = () => { 
-    const [active, setActive] = useState(false);
+const Navbar = () => {
+  const [active, setActive] = useState(false);
+  const [openMenu, setOpenMenu] = useState(false);
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
-    useEffect(() => {
-        const handleScroll = () => {
-            if (window.scrollY > 50) {
-                setActive(true);
-            } else {
-                setActive(false);
-            }
-        };
+  useEffect(() => {
+    const handleScroll = () => {
+      const current = window.scrollY;
 
-        window.addEventListener("scroll", handleScroll);
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
-    }, []);
+      // shrink effect
+      setActive(current > 50);
 
-    return (
-        
-        <div className="navbar py-7 flex items-center justify-between">
-            <div className="logo">
-                <h1 className="text-3xl font-bold bg-white text-black p-1 md:bg-transparent md:text-white">Portfolio</h1>
-            </div>
-            <ul 
-                className={`menu flex items-center sm:gap-10 gap-4
-                           md:static fixed left-1/2 -translate-x-1/2 md:translate-x-0 
-                           md:opacity-100 bg-white/30 backdrop-blur-md 
-                           p-4 rounded-br-2xl rounded-bl-2xl md:bg-transparent transition-all md:transition-none z-40
-                           ${active ? "top-0 opacity-100" : "-top-10 opacity-0"}`
-                         }>
-                <li>
-                    <a href="#beranda" className="sm:text-lg text-base font-medium">Beranda</a>
-                </li>
-                <li>
-                    <a href="#tentang" className="sm:text-lg text-base font-medium">Tentang</a>
-                </li>
-                <li>
-                    <a href="#proyek" className="sm:text-lg text-base font-medium">Proyek</a>
-                </li>
-                <li>
-                    <a href="#experience" className="sm:text-lg text-base font-medium">Experience</a>
-                </li>
-                <li>
-                    <a href="#kontak" className="sm:text-lg text-base font-medium">Kontak</a>
-                </li>
-            </ul>
+      // homepage limit (navbar must stay visible)
+      const homeLimit = window.innerHeight * 0.6;
+      const isOnHome = current < homeLimit;
+
+      if (isOnHome) {
+        // on homepage, navbar MUST stay visible
+        setShowNavbar(true);
+      } else {
+        // scroll up → navbar hides
+        if (current < lastScrollY) {
+          setShowNavbar(false);
+        }
+
+        // scroll down → navbar appears
+        if (current > lastScrollY) {
+          setShowNavbar(true);
+        }
+      }
+
+      setLastScrollY(current);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
+
+  const linkStyle =
+    "relative text-white/80 font-medium transition duration-300 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#ff76e9] hover:via-[#7f6bff] hover:to-[#007bff]";
+
+  const handleLinkClick = () => setOpenMenu(false);
+
+  return (
+    <nav
+      className={`
+        fixed left-0 right-0 z-50 transition-all duration-500
+        ${active ? "py-3" : "py-6"}
+        ${showNavbar ? "top-0" : "-top-28"}
+      `}
+    >
+      <div className="max-w-6xl mx-auto px-6">
+        <div
+          className={`flex items-center justify-between px-6 py-3 rounded-2xl
+          transition-all duration-500 border
+          ${
+            active
+              ? "bg-white/5 backdrop-blur-xl border-white/10 shadow-lg"
+              : "bg-white/5 backdrop-blur-md border-white/5"
+          }`}
+        >
+          {/* LOGO */}
+          <h1 className="text-2xl font-bold bg-gradient-to-r from-[#ff76e9] via-[#7f6bff] to-[#007bff] bg-clip-text text-transparent drop-shadow-md">
+            Muhammad Faisal
+          </h1>
+
+          {/* DESKTOP MENU */}
+          <ul className="hidden md:flex items-center gap-10 text-lg">
+            <li><a href="#home" className={linkStyle}>Home</a></li>
+            <li><a href="#about" className={linkStyle}>About</a></li>
+            <li><a href="#projects" className={linkStyle}>Projects</a></li>
+            <li><a href="#experience" className={linkStyle}>Experience</a></li>
+            <li><a href="#contact" className={linkStyle}>Contact</a></li>
+          </ul>
+
+          {/* HAMBURGER */}
+          <button
+            className="text-white text-3xl md:hidden z-[60]"
+            onClick={() => setOpenMenu(!openMenu)}
+          >
+            {openMenu ? <RiCloseLine /> : <RiMenu3Line />}
+          </button>
         </div>
-    );
-}
+      </div>
 
-export default Navbar; 
+      {/* MOBILE MENU */}
+      <ul
+        className={`
+          md:hidden fixed top-0 right-0 h-full w-2/3
+          backdrop-blur-xl bg-white/5 border-l border-white/10 shadow-xl
+          p-10 pt-28 flex flex-col gap-8 text-xl
+          transition-transform duration-300 z-[55]
+          ${openMenu ? "translate-x-0" : "translate-x-full"}
+        `}
+      >
+        <li><a onClick={handleLinkClick} href="#home" className={linkStyle}>Home</a></li>
+        <li><a onClick={handleLinkClick} href="#about" className={linkStyle}>About</a></li>
+        <li><a onClick={handleLinkClick} href="#projects" className={linkStyle}>Projects</a></li>
+        <li><a onClick={handleLinkClick} href="#experience" className={linkStyle}>Experience</a></li>
+        <li><a onClick={handleLinkClick} href="#contact" className={linkStyle}>Contact</a></li>
+      </ul>
+
+      {openMenu && (
+        <div
+          className="md:hidden fixed inset-0 bg-black/20 backdrop-blur-[2px] z-40"
+          onClick={handleLinkClick}
+        />
+      )}
+    </nav>
+  );
+};
+
+export default Navbar;
