@@ -139,7 +139,7 @@ and creating clean, thoughtful visuals where technology, logic, and aesthetics c
        In web development, I am used to using it <span className="font-semibold text-white">Laravel</span> and 
         <span className="font-semibold text-white"> React</span> as the main tech stack. For data experiments, I use 
         <span className="font-semibold text-white"> Python</span>. I also rely on 
-        <span className="font-semibold text-white"> Figma</span> to design modern UIs that are intuitive, consistent, and easy to use.
+        <span className="font-semibold text-white"> Figma</span> to design modern UI that are intuitive, consistent, and easy to use.
       </p>
 
       {/* Highlight Box */}
@@ -318,7 +318,7 @@ and creating clean, thoughtful visuals where technology, logic, and aesthetics c
             target="_blank"
             className="bg-gradient-to-r from-[#ff76e9] to-[#007bff] py-2 px-4 rounded-lg block text-center font-semibold hover:opacity-90 transition"
           >
-            Lihat Sekarang!
+            Check it Now!
           </a>
         </div>
       </div>
@@ -507,11 +507,19 @@ and creating clean, thoughtful visuals where technology, logic, and aesthetics c
           <span className="text-lg">0896-2308-0473</span>
         </a>
 
-        <a href="mailto:muhammadfaisal.0514@gmail.com"
-          className="flex items-center gap-4 p-3 rounded-lg hover:bg-white/10 transition">
-          <FaEnvelope className="text-blue-400 text-3xl" />
-          <span className="text-lg">muhammadfaisal.0514@gmail.com</span>
-        </a>
+       <a 
+   href="https://mail.google.com/mail/?view=cm&to=muhammadfaisal.0514@gmail.com"
+target="_blank"
+rel="noreferrer"
+
+    className="flex items-center gap-3 sm:gap-4 p-3 rounded-lg hover:bg-white/10 transition"
+   >
+    <FaEnvelope className="text-blue-400 text-2xl sm:text-3xl flex-shrink-0" />
+    <span className="text-sm sm:text-lg truncate">
+    muhammadfaisal.0514@gmail.com
+  </span>
+</a>
+
 
         <hr className="border-zinc-700 my-2" />
 
@@ -540,64 +548,78 @@ and creating clean, thoughtful visuals where technology, logic, and aesthetics c
 
     {/* RIGHT — Form */}
     <form
-      action="https://formsubmit.co/paisalmen123@gmail.com"
-      method="POST"
-      className="bg-zinc-900 p-8 rounded-2xl border border-zinc-700 shadow-lg"
-      autoComplete="off"
-      data-aos="fade-left"
+  action="https://formsubmit.co/paisalmen123@gmail.com"
+  method="POST"
+  className="bg-zinc-900 p-8 rounded-2xl border border-zinc-700 shadow-lg"
+  autoComplete="off"
+  data-aos="fade-left"
+>
+  <h2 className="text-2xl font-semibold mb-6 bg-gradient-to-r from-[#ff76e9] to-[#007bff] bg-clip-text text-transparent">
+    Send Me a Message
+  </h2>
+
+  <div className="flex flex-col gap-5">
+
+    {/* Full Name */}
+    <div>
+      <label className="font-medium mb-1 block">Full Name</label>
+      <input
+        type="text"
+        name="name"
+        placeholder="Enter Your Name..."
+        className="w-full p-3 rounded-lg bg-zinc-800 border border-zinc-600 
+        focus:border-[#007bff] focus:ring-2 focus:ring-[#007bff66] outline-none transition"
+        required
+      />
+    </div>
+
+    {/* Email */}
+    <div>
+      <label className="font-medium mb-1 block">Email</label>
+      <input
+        type="email"
+        name="email"
+        placeholder="Enter Your Email..."
+        className="w-full p-3 rounded-lg bg-zinc-800 border border-zinc-600 
+        focus:border-[#ff76e9] focus:ring-2 focus:ring-[#ff76e966] outline-none transition"
+        required
+      />
+    </div>
+
+    {/* Message */}
+    <div>
+      <label className="font-medium mb-1 block">Message</label>
+      <textarea
+        name="message"
+        rows="6"
+        placeholder="Write your message..."
+        className="w-full p-3 rounded-lg bg-zinc-800 border border-zinc-600 
+        focus:border-[#007bff] focus:ring-2 focus:ring-[#007bff66] outline-none transition"
+        required
+      ></textarea>
+    </div>
+
+    {/* Send Button */}
+    <button
+      type="submit"
+      className="w-full py-3 rounded-lg font-semibold text-white 
+      bg-gradient-to-r from-[#ff76e9] to-[#007bff] hover:opacity-90 transition cursor-pointer"
     >
-      <h2 className="text-2xl font-semibold mb-6 bg-gradient-to-r from-[#ff76e9] to-[#007bff] bg-clip-text text-transparent">
-        Send Me a Message
-      </h2>
+      Send Message
+    </button>
+  </div>
 
-      <div className="flex flex-col gap-5">
+  {/* Hidden Inputs for FormSubmit */}
+  <input type="hidden" name="_captcha" value="false" />
+  <input type="hidden" name="_template" value="table" />
 
-        <div>
-          <label className="font-medium mb-1 block">Full Name</label>
-          <input
-            type="text"
-            name="nama"
-            placeholder="Enter Your Name..."
-            className="w-full p-3 rounded-lg bg-zinc-800 border border-zinc-600 focus:border-[#007bff] focus:ring-2 focus:ring-[#007bff66] outline-none transition"
-            required
-          />
-        </div>
-
-        <div>
-          <label className="font-medium mb-1 block">Email</label>
-          <input
-            type="email"
-            name="email"
-            placeholder="Enter Your Email..."
-            className="w-full p-3 rounded-lg bg-zinc-800 border border-zinc-600 focus:border-[#ff76e9] focus:ring-2 focus:ring-[#ff76e966] outline-none transition"
-            required
-          />
-        </div>
-
-        <div>
-          <label className="font-medium mb-1 block">Message</label>
-          <textarea
-            name="message"
-            rows="6"
-            placeholder="Write your message..."
-            className="w-full p-3 rounded-lg bg-zinc-800 border border-zinc-600 focus:border-[#007bff] focus:ring-2 focus:ring-[#007bff66] outline-none transition"
-            required
-          ></textarea>
-        </div>
-
-        <button
-          type="submit"
-          className="w-full py-3 rounded-lg font-semibold text-white bg-gradient-to-r from-[#ff76e9] to-[#007bff] hover:opacity-90 transition"
-        >
-          Send Message
-        </button>
-
-      </div>
-
-      {/* Hidden Inputs */}
-      <input type="hidden" name="_captcha" value="false" />
-      <input type="hidden" name="_template" value="table" />
-    </form>
+  {/* Redirect after submit (optional) */}
+  <input 
+    type="hidden" 
+    name="_next" 
+    value="https://localhost:5173/?sent=success" 
+  />
+</form>
   </div>
 </div>
 

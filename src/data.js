@@ -256,7 +256,7 @@ export const listProyek = [
     nama: "MindMate",
     desk: "Design of a mental health solution application that has several features to help users maintain their mental health. These features include a mental health tracker, activity manager, and counseling services for improved well-being.",
     tools: ["Figma", "Blush", "Iconify"],
-    link: "https://github.com/sekartri18/event-management.git",
+    link: "https://www.figma.com/design/hOxBOjZLiblAxvPhxJd35W/MindMate---Techcompest?node-id=35-2&t=x6Tiw3YEAQbv3D2G-1",
     dad: "700",
   },
   {
@@ -265,7 +265,7 @@ export const listProyek = [
     nama: "Voice Guide",
     desk: "A tap-to-speech assistive system that converts tap patterns into clear speech. Designed to help individuals with speech impairments communicate more easily, providing a simple solution to express their needs and thoughts.",
     tools: ["Figma", "Blush", "Iconify"],
-    link: "https://github.com/sekartri18/event-management.git",
+    link: "https://www.figma.com/design/yINqDB1TXxaqTc6U3jUWhi/Voice-Guide?node-id=0-1&t=UF61OlwZJym5tQsO-1",
     dad: "700",
   },
   {
@@ -274,7 +274,7 @@ export const listProyek = [
     nama: "WizFal Creative",
     desk: "Design of a website providing photography and videography services focused on capturing important moments such as graduations and formal events, as well as offering services to support the visual needs of MSMEs.",
     tools: ["Figma"],
-    link: "https://github.com/sekartri18/event-management.git",
+    link: "https://www.figma.com/design/XpjpZk5gDxHUHd6gSmwB9z/Projek-Faisal?node-id=517-46&t=HfiomrfYX3TgOhDy-1",
     dad: "700",
   },
 ];
