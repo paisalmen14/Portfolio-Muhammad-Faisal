@@ -8,7 +8,7 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const current = window.scrollY;
-      setActive(current > 50); // shrink effect tetap bisa
+      setActive(current > 50); 
     };
 
     window.addEventListener("scroll", handleScroll);

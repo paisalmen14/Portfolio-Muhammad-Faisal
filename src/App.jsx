@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-      <div className="hero grid md:grid-cols-2 items-center pt-40 xl:gap-0 gap-6 grid-cols-1 max-w-7xl mx-auto px-4 md:px-2">
+      <div id="home" className="hero grid md:grid-cols-2 items-center pt-40 xl:gap-0 gap-6 grid-cols-1 max-w-7xl mx-auto px-4 md:px-2">
       <div className="animate__animated animate__fadeInUp animate__delay-1s">
         <div className="flex items-center gap-3 mb-6 bg-zinc-800 w-fit p-4 rounded-2xl"> 
           <img src={Dataimage.HeroImage} alt="Hero Image" className="w-10 rounded-md" loading="lazy"/>
@@ -46,8 +46,9 @@ and creating clean, thoughtful visuals where technology, logic, and aesthetics c
 
         <div className="flex items-center sm:gap-4 gap-2">
 <a
-  href="#"
-  class="inline-flex items-center justify-center px-6 py-3 font-medium text-white rounded-full
+  href="/assets/CV_MuhammadFaisal.pdf"
+  download="CV_MuhammadFaisal.pdf"
+  className="inline-flex items-center justify-center px-6 py-3 font-medium text-white rounded-full
          bg-gradient-to-r from-[#ff76e9] to-[#007bff]
          transition-all duration-300 ease-out
          hover:shadow-[0_0_15px_2px_rgba(0,123,255,0.8)]
@@ -78,7 +79,7 @@ and creating clean, thoughtful visuals where technology, logic, and aesthetics c
 />
       </div>
 
-      {/* Tentang */}
+      {/* About */}
 <div
   id="about"
   className="mt-32 py-20"
@@ -99,7 +100,7 @@ and creating clean, thoughtful visuals where technology, logic, and aesthetics c
 
   <div className="flex flex-col lg:flex-row items-center gap-16 max-w-6xl mx-auto px-6">
 
-    {/* Foto */}
+    {/* Photo */}
     <div className="w-full lg:w-1/2 flex justify-center">
       <div className="
         relative rounded-3xl overflow-hidden
@@ -118,12 +119,11 @@ and creating clean, thoughtful visuals where technology, logic, and aesthetics c
           "
         />
 
-        {/* Glow background */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#ff76e930] to-[#007bff30] opacity-40 mix-blend-soft-light"></div>
       </div>
     </div>
 
-    {/* Tulisan */}
+ 
     <div className="w-full lg:w-1/2 space-y-6 text-center lg:text-left">
 
       <h2 className="text-3xl font-semibold bg-gradient-to-r from-[#ff76e9] to-[#007bff] bg-clip-text text-transparent">
@@ -241,8 +241,8 @@ and creating clean, thoughtful visuals where technology, logic, and aesthetics c
 </div>
 </div>
 
-      {/* Proyek */}
-<div className="proyek mt-32 py-10 max-w-7xl mx-auto px-4 md:px-2" id="projects">
+      {/* Projects */}
+<div className="projects mt-32 py-10 max-w-7xl mx-auto px-4 md:px-2" id="projects">
 
   {/* Title */}
   <h1
@@ -354,11 +354,10 @@ and creating clean, thoughtful visuals where technology, logic, and aesthetics c
 
   <div className="relative w-full max-w-4xl mx-auto px-4 sm:px-6 md:px-8">
 
-    {/* GARIS TIMELINE */}
+    
     <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-[3px] bg-gradient-to-b from-[#ff76e9] to-[#007bff] h-full rounded-full"></div>
     <div className="block md:hidden absolute left-4 sm:left-6 w-[3px] bg-gradient-to-b from-[#ff76e9] to-[#007bff] h-full rounded-full"></div>
 
-    {/* ITEM TEMPLATE */}
     {[
       {
         title: "HIMA ILKOM UNNES",
@@ -402,11 +401,11 @@ and creating clean, thoughtful visuals where technology, logic, and aesthetics c
           item.flip ? "md:flex-row-reverse" : "md:flex-row"
         } items-center md:items-start relative`}
       >
-        {/* Titik timeline */}
+        
         <div className="bg-gradient-to-r from-[#ff76e9] to-[#007bff] w-5 h-5 rounded-full absolute left-4 sm:left-6 top-0 transform -translate-x-1/2 md:hidden"></div>
         <div className="hidden md:block bg-gradient-to-r from-[#ff76e9] to-[#007bff] w-5 h-5 rounded-full absolute left-1/2 top-0 transform -translate-x-1/2"></div>
 
-        {/* TEXT */}
+       
         <div
           className={`md:w-1/2 w-full ${
             item.flip
@@ -442,7 +441,7 @@ and creating clean, thoughtful visuals where technology, logic, and aesthetics c
           </p>
         </div>
 
-        {/* IMAGE */}
+      
         <div
           className={`md:w-1/2 w-full mt-6 md:mt-0 flex ${
             item.flip ? "md:justify-end" : "md:justify-start"
@@ -464,10 +463,11 @@ and creating clean, thoughtful visuals where technology, logic, and aesthetics c
     ))}
   </div>
 </div>
-{/* Kontak */}
-<div className="kontak mt-32 p-5" id="contact">
 
-  {/* Title */}
+{/* Contact */}
+<div className="contact mt-32 p-5" id="contact">
+
+  
   <div className="text-center mb-14">
     <h1
       className="text-4xl font-extrabold bg-gradient-to-r from-[#ff76e9] to-[#007bff] text-transparent bg-clip-text"
@@ -484,7 +484,7 @@ and creating clean, thoughtful visuals where technology, logic, and aesthetics c
     </p>
   </div>
 
-  {/* Main Container */}
+ 
   <div className="max-w-6xl mx-auto grid lg:grid-cols-2 grid-cols-1 gap-10">
 
     {/* LEFT — Glassmorphism Contact Card */}
@@ -492,7 +492,7 @@ and creating clean, thoughtful visuals where technology, logic, and aesthetics c
       className="backdrop-blur-lg bg-white/5 border border-white/10 p-8 rounded-2xl shadow-xl relative overflow-hidden"
       data-aos="fade-right"
     >
-      {/* Glow Background */}
+    
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-[#ff76e913] to-[#007bff13] opacity-20 pointer-events-none"></div>
 
       <h2 className="text-2xl font-semibold mb-6 text-[#ff76e9] drop-shadow">
@@ -622,7 +622,6 @@ rel="noreferrer"
 </form>
   </div>
 </div>
-
 
     </> 
   )
