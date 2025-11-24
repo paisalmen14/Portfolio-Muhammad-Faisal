@@ -539,42 +539,40 @@ and creating clean, thoughtful visuals where technology, logic, and aesthetics c
         You can also find me on:
       </h2>
 
-      <div className="flex items-center gap-6">
+      <div className="flex flex-col sm:flex-row items-center gap-6">
+  {/* GitHub */}
+  <a
+    href="https://github.com/paisalmen14"
+    target="_blank"
+    className="flex flex-col items-center justify-center gap-2 w-36 h-28 bg-white/5 border border-white/10 rounded-xl
+               hover:bg-white/10 transition-all duration-300 group"
+  >
+    <FaGithub className="text-3xl group-hover:scale-110 transition" />
+    <span className="text-white/90">GitHub</span>
+  </a>
 
-        {/* GitHub */}
-        <a
-          href="https://github.com/paisalmen14"
-          target="_blank"
-          className="flex items-center gap-2 bg-white/5 border border-white/10 px-5 py-3 rounded-xl 
-                     hover:bg-white/10 transition-all duration-300 group"
-        >
-          <FaGithub className="text-3xl group-hover:scale-110 transition" />
-          <span className="text-white/90">GitHub</span>
-        </a>
+  {/* LinkedIn */}
+  <a
+    href="https://www.linkedin.com/in/muhammad-faisal-838220195/"
+    target="_blank"
+    className="flex flex-col items-center justify-center gap-2 w-36 h-28 bg-white/5 border border-white/10 rounded-xl
+               hover:bg-white/10 transition-all duration-300 group"
+  >
+    <FaLinkedin className="text-3xl text-blue-500 group-hover:scale-110 transition" />
+    <span className="text-white/90">LinkedIn</span>
+  </a>
 
-        {/* LinkedIn */}
-        <a
-          href="https://www.linkedin.com/in/muhammad-faisal-838220195/"
-          target="_blank"
-          className="flex items-center gap-2 bg-white/5 border border-white/10 px-5 py-3 rounded-xl 
-                     hover:bg-white/10 transition-all duration-300 group"
-        >
-          <FaLinkedin className="text-3xl text-blue-500 group-hover:scale-110 transition" />
-          <span className="text-white/90">LinkedIn</span>
-        </a>
-
-        {/* Instagram */}
-        <a
-          href="https://www.instagram.com/muhfaisal1_/"
-          target="_blank"
-          className="flex items-center gap-2 bg-white/5 border border-white/10 px-5 py-3 rounded-xl 
-                     hover:bg-white/10 transition-all duration-300 group"
-        >
-          <FaInstagram className="text-3xl text-pink-500 group-hover:scale-110 transition" />
-          <span className="text-white/90">Instagram</span>
-        </a>
-
-      </div>
+  {/* Instagram */}
+  <a
+    href="https://www.instagram.com/muhfaisal1_/"
+    target="_blank"
+    className="flex flex-col items-center justify-center gap-2 w-36 h-28 bg-white/5 border border-white/10 rounded-xl
+               hover:bg-white/10 transition-all duration-300 group"
+  >
+    <FaInstagram className="text-3xl text-pink-500 group-hover:scale-110 transition" />
+    <span className="text-white/90">Instagram</span>
+  </a>
+</div>
     </div>
 
   </div>
