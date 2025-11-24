@@ -191,7 +191,7 @@ import Proyek3 from "/assets/proyek/proyek3.png";
 import Proyek4 from "/assets/proyek/proyek4.png";
 import Proyek5 from "/assets/proyek/proyek5.png";
 import Proyek6 from "/assets/proyek/proyek6.png";
-import Proyek7 from "/assets/proyek/proyek7.png";
+import Proyek7 from "/assets/proyek/proyek7.jpg";
 import Proyek8 from "/assets/proyek/proyek8.png";
 import Proyek9 from "/assets/proyek/proyek9.png";
 
@@ -253,29 +253,30 @@ export const listProyek = [
   {
     id: 7,
     gambar: Proyek7,
-    nama: "MindMate",
-    desk: "Design of a mental health solution application that has several features to help users maintain their mental health. These features include a mental health tracker, activity manager, and counseling services for improved well-being.",
-    tools: ["Figma", "Blush", "Iconify"],
-    link: "https://www.figma.com/design/hOxBOjZLiblAxvPhxJd35W/MindMate---Techcompest?node-id=35-2&t=x6Tiw3YEAQbv3D2G-1",
+    nama: "AisNews",
+    desk: "A news website built using Laravel as the primary framework. This project also uses Filament as an administration panel (admin panel) to facilitate content and data management.",
+    tools: ["PHP", "Laravel", "Filament", "HTML5", "Tailwind CSS", "JavaScript", "MySQL"],
+    link: "https://github.com/paisalmen14/AisNews.git",
     dad: "700",
   },
   {
     id: 8,
     gambar: Proyek8,
-    nama: "Voice Guide",
-    desk: "A tap-to-speech assistive system that converts tap patterns into clear speech. Designed to help individuals with speech impairments communicate more easily, providing a simple solution to express their needs and thoughts.",
+    nama: "MindMate",
+    desk: "Design of a mental health solution application that has several features to help users maintain their mental health. These features include a mental health tracker, activity manager, and counseling services for improved well-being.",
     tools: ["Figma", "Blush", "Iconify"],
-    link: "https://www.figma.com/design/yINqDB1TXxaqTc6U3jUWhi/Voice-Guide?node-id=0-1&t=UF61OlwZJym5tQsO-1",
-    dad: "700",
+    link: "https://www.figma.com/design/hOxBOjZLiblAxvPhxJd35W/MindMate---Techcompest?node-id=35-2&t=x6Tiw3YEAQbv3D2G-1",
+    dad: "800",
   },
   {
     id: 9,
     gambar: Proyek9,
-    nama: "WizFal Creative",
-    desk: "Design of a website providing photography and videography services focused on capturing important moments such as graduations and formal events, as well as offering services to support the visual needs of MSMEs.",
-    tools: ["Figma"],
-    link: "https://www.figma.com/design/XpjpZk5gDxHUHd6gSmwB9z/Projek-Faisal?node-id=517-46&t=HfiomrfYX3TgOhDy-1",
-    dad: "700",
+    nama: "Voice Guide",
+    desk: "A tap-to-speech assistive system that converts tap patterns into clear speech. Designed to help individuals with speech impairments communicate more easily, providing a simple solution to express their needs and thoughts.",
+    tools: ["Figma", "Blush", "Iconify"],
+    link: "https://www.figma.com/design/yINqDB1TXxaqTc6U3jUWhi/Voice-Guide?node-id=0-1&t=UF61OlwZJym5tQsO-1",
+    dad: "900",
   },
+  
 ];
 

@@ -131,15 +131,15 @@ and creating clean, thoughtful visuals where technology, logic, and aesthetics c
       </h2>
 
       <p className="text-base leading-relaxed text-white/80 hover:text-white transition-all duration-300">
-        I'm an Informatics Engineering student focusing on web development, machine learning, and UI/UX design.
-        I enjoy helping create digital solutions that are functional, beautiful, and have immediate impact.
+        I’m an Informatics Engineering student focusing on web development, machine learning, and UI/UX design.
+        I enjoy building digital solutions that are functional, visually appealing, and impactful.
       </p>
 
       <p className="text-base leading-relaxed text-white/80 hover:text-white transition-all duration-300">
-       In web development, I am used to using it <span className="font-semibold text-white">Laravel</span> and 
-        <span className="font-semibold text-white"> React</span> as the main tech stack. For data experiments, I use 
+       In web development, I am used to using <span className="font-semibold text-white">Laravel</span> and 
+        <span className="font-semibold text-white"> React</span> as my main tech stack. For data experiments, I use 
         <span className="font-semibold text-white"> Python</span>. I also rely on 
-        <span className="font-semibold text-white"> Figma</span> to design modern UI that are intuitive, consistent, and easy to use.
+        <span className="font-semibold text-white"> Figma</span> to design modern user interfaces that are intuitive, consistent, and easy to use.
       </p>
 
       {/* Highlight Box */}
@@ -467,7 +467,6 @@ and creating clean, thoughtful visuals where technology, logic, and aesthetics c
 {/* Contact */}
 <div className="contact mt-32 p-5" id="contact">
 
-  
   <div className="text-center mb-14">
     <h1
       className="text-4xl font-extrabold bg-gradient-to-r from-[#ff76e9] to-[#007bff] text-transparent bg-clip-text"
@@ -475,153 +474,112 @@ and creating clean, thoughtful visuals where technology, logic, and aesthetics c
     >
       My Contact
     </h1>
-    <p
-      className="text-base opacity-70 mt-2"
-      data-aos="fade-up"
-      data-aos-delay="200"
-    >
-      Please feel free to contact me through the contact information or the form below.
-    </p>
+  <p
+  className="text-base opacity-70 mt-2 leading-relaxed"
+  data-aos="fade-up"
+  data-aos-delay="200"
+>
+  I’m always open to{" "}
+  <span class="bg-gradient-to-r from-[#ff76e9] to-[#007bff] text-transparent bg-clip-text font-semibold">
+    new opportunities and collaborations
+  </span>.
+  
+  <span class="block mt-2">
+    Whether you’re working on something exciting or simply want to connect, feel free to reach out!
+  </span>
+</p>
+
   </div>
 
- 
-  <div className="max-w-6xl mx-auto grid lg:grid-cols-2 grid-cols-1 gap-10">
+  {/* WRAPPER */}
+  <div className="max-w-6xl mx-auto flex flex-col items-center gap-10">
 
-    {/* LEFT — Glassmorphism Contact Card */}
-    <div
-      className="backdrop-blur-lg bg-white/5 border border-white/10 p-8 rounded-2xl shadow-xl relative overflow-hidden"
-      data-aos="fade-right"
-    >
-    
-      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-[#ff76e913] to-[#007bff13] opacity-20 pointer-events-none"></div>
+    {/* CARD GRID EMAIL & WHATSAPP */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl">
 
-      <h2 className="text-2xl font-semibold mb-6 text-[#ff76e9] drop-shadow">
-        Contact Information
+      {/* EMAIL CARD */}
+      <a
+        href="https://mail.google.com/mail/?view=cm&to=muhammadfaisal.0514@gmail.com"
+        target="_blank"
+        className="relative p-8 rounded-3xl backdrop-blur-xl bg-white/10 border border-white/20 
+                   shadow-[0_0_50px_rgb(0,0,0,0.3)] hover:shadow-[0_0_80px_rgb(0,123,255,0.25)]
+                   transition-all duration-500 flex flex-col items-center gap-4 group"
+        data-aos="fade-right"
+      >
+        <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[#ff76e91a] via-[#ffffff05] to-[#007bff1a]"></div>
+        <FaEnvelope className="text-4xl text-blue-400 group-hover:scale-110 transition duration-300 z-10" />
+        <h2 className="text-xl font-semibold text-white z-10">Email Me</h2>
+        <p className="text-white/80 text-center text-sm z-10">
+          muhammadfaisal.0514@gmail.com
+        </p>
+      </a>
+
+      {/* WHATSAPP CARD */}
+      <a
+        href="https://wa.me/6289623080473"
+        target="_blank"
+        className="relative p-8 rounded-3xl backdrop-blur-xl bg-white/10 border border-white/20 
+                   shadow-[0_0_50px_rgb(0,0,0,0.3)] hover:shadow-[0_0_80px_rgb(0,123,255,0.25)]
+                   transition-all duration-500 flex flex-col items-center gap-4 group"
+        data-aos="fade-left"
+      >
+        <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[#ff76e91a] via-[#ffffff05] to-[#007bff1a]"></div>
+        <FaWhatsapp className="text-4xl text-green-400 group-hover:scale-110 transition duration-300 z-10" />
+        <h2 className="text-xl font-semibold text-white z-10">WhatsApp</h2>
+        <p className="text-white/80 text-center text-sm z-10">
+          0896-2308-0473
+        </p>
+      </a>
+
+    </div>
+
+    {/* SOCIAL MEDIA SECTION */}
+    <div className="w-full flex flex-col items-center gap-5">
+      <h2 className="text-center text-xl font-semibold text-[#007bff] tracking-wide">
+        You can also find me on:
       </h2>
 
-      <div className="flex flex-col gap-5 relative z-10">
+      <div className="flex items-center gap-6">
 
-        <a href="https://wa.me/6289623080473" target="_blank"
-          className="flex items-center gap-4 p-3 rounded-lg hover:bg-white/10 transition">
-          <FaWhatsapp className="text-green-400 text-3xl" />
-          <span className="text-lg">0896-2308-0473</span>
+        {/* GitHub */}
+        <a
+          href="https://github.com/paisalmen14"
+          target="_blank"
+          className="flex items-center gap-2 bg-white/5 border border-white/10 px-5 py-3 rounded-xl 
+                     hover:bg-white/10 transition-all duration-300 group"
+        >
+          <FaGithub className="text-3xl group-hover:scale-110 transition" />
+          <span className="text-white/90">GitHub</span>
         </a>
 
-       <a 
-   href="https://mail.google.com/mail/?view=cm&to=muhammadfaisal.0514@gmail.com"
-target="_blank"
-rel="noreferrer"
-
-    className="flex items-center gap-3 sm:gap-4 p-3 rounded-lg hover:bg-white/10 transition"
-   >
-    <FaEnvelope className="text-blue-400 text-2xl sm:text-3xl flex-shrink-0" />
-    <span className="text-sm sm:text-lg truncate">
-    muhammadfaisal.0514@gmail.com
-  </span>
-</a>
-
-
-        <hr className="border-zinc-700 my-2" />
-
-        <h3 className="font-semibold text-[#007bff] mb-2">Social Media</h3>
-
-        <a href="https://github.com/paisalmen14" target="_blank"
-          className="flex items-center gap-4 p-3 rounded-lg hover:bg-white/10 transition">
-          <FaGithub className="text-2xl" />
-          <span className="text-lg">GitHub</span>
+        {/* LinkedIn */}
+        <a
+          href="https://www.linkedin.com/in/muhammad-faisal-838220195/"
+          target="_blank"
+          className="flex items-center gap-2 bg-white/5 border border-white/10 px-5 py-3 rounded-xl 
+                     hover:bg-white/10 transition-all duration-300 group"
+        >
+          <FaLinkedin className="text-3xl text-blue-500 group-hover:scale-110 transition" />
+          <span className="text-white/90">LinkedIn</span>
         </a>
 
-        <a href="https://www.linkedin.com/in/muhammad-faisal-838220195/" target="_blank"
-          className="flex items-center gap-4 p-3 rounded-lg hover:bg-white/10 transition">
-          <FaLinkedin className="text-blue-500 text-2xl" />
-          <span className="text-lg">LinkedIn</span>
-        </a>
-
-        <a href="https://www.instagram.com/muhfaisal1_/" target="_blank"
-          className="flex items-center gap-4 p-3 rounded-lg hover:bg-white/10 transition">
-          <FaInstagram className="text-pink-500 text-2xl" />
-          <span className="text-lg">Instagram</span>
+        {/* Instagram */}
+        <a
+          href="https://www.instagram.com/muhfaisal1_/"
+          target="_blank"
+          className="flex items-center gap-2 bg-white/5 border border-white/10 px-5 py-3 rounded-xl 
+                     hover:bg-white/10 transition-all duration-300 group"
+        >
+          <FaInstagram className="text-3xl text-pink-500 group-hover:scale-110 transition" />
+          <span className="text-white/90">Instagram</span>
         </a>
 
       </div>
     </div>
 
-    {/* RIGHT — Form */}
-    <form
-  action="https://formsubmit.co/paisalmen123@gmail.com"
-  method="POST"
-  className="bg-zinc-900 p-8 rounded-2xl border border-zinc-700 shadow-lg"
-  autoComplete="off"
-  data-aos="fade-left"
->
-  <h2 className="text-2xl font-semibold mb-6 bg-gradient-to-r from-[#ff76e9] to-[#007bff] bg-clip-text text-transparent">
-    Send Me a Message
-  </h2>
-
-  <div className="flex flex-col gap-5">
-
-    {/* Full Name */}
-    <div>
-      <label className="font-medium mb-1 block">Full Name</label>
-      <input
-        type="text"
-        name="name"
-        placeholder="Enter Your Name..."
-        className="w-full p-3 rounded-lg bg-zinc-800 border border-zinc-600 
-        focus:border-[#007bff] focus:ring-2 focus:ring-[#007bff66] outline-none transition"
-        required
-      />
-    </div>
-
-    {/* Email */}
-    <div>
-      <label className="font-medium mb-1 block">Email</label>
-      <input
-        type="email"
-        name="email"
-        placeholder="Enter Your Email..."
-        className="w-full p-3 rounded-lg bg-zinc-800 border border-zinc-600 
-        focus:border-[#ff76e9] focus:ring-2 focus:ring-[#ff76e966] outline-none transition"
-        required
-      />
-    </div>
-
-    {/* Message */}
-    <div>
-      <label className="font-medium mb-1 block">Message</label>
-      <textarea
-        name="message"
-        rows="6"
-        placeholder="Write your message..."
-        className="w-full p-3 rounded-lg bg-zinc-800 border border-zinc-600 
-        focus:border-[#007bff] focus:ring-2 focus:ring-[#007bff66] outline-none transition"
-        required
-      ></textarea>
-    </div>
-
-    {/* Send Button */}
-    <button
-      type="submit"
-      className="w-full py-3 rounded-lg font-semibold text-white 
-      bg-gradient-to-r from-[#ff76e9] to-[#007bff] hover:opacity-90 transition cursor-pointer"
-    >
-      Send Message
-    </button>
-  </div>
-
-  {/* Hidden Inputs for FormSubmit */}
-  <input type="hidden" name="_captcha" value="false" />
-  <input type="hidden" name="_template" value="table" />
-
-  {/* Redirect after submit (optional) */}
-  <input 
-    type="hidden" 
-    name="_next" 
-    value="https://localhost:5173/?sent=success" 
-  />
-</form>
   </div>
 </div>
+
 
     </> 
   )
